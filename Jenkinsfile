@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git 'https://github.com/effectivejenkins/myProject.git'
+        git credentialsId: 'git_user_cred', url: 'git@github.com:msathya09/myProject.git'
       }
     }
     stage('Build') {
